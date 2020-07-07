@@ -14,29 +14,17 @@
 			v-for="(item, index) in list"
 			:key="index"
 			:style="{
-				color: value == index ? activeColor : ''
+				color: value == index ? activeColor : inactiveColor
 			}"
 			:class="[ value == index ? 'van-tabbar-item--active' : '']"
 			@click="onClick(index, item)"
 		>
 			<view class="van-tabbar-item__icon">
-				<van-icon :name="item.icon"></van-icon>
+				<van-icon :name="item.icon" color="value == index ? activeColor : inactiveColor" :size="size"></van-icon>
 				<van-info :dot="item.dot" :badge="item.badge" v-if="item.badge && item['badge']"></van-info>
 			</view>
 			<view class="van-tabbar-item__text">{{ item.text }}</view>
 		</view>
-
-		<!-- 		<van-tabbar-item
-			v-for="(item, index) in list"
-			:key="index"
-			@click="onClick(index, item)"
-			:dot="item.dot"
-			:badge="item.badge"
-			:icon="item.icon"
-			:active="value === index ? true : false"
-		>
-			{{ item.text }}
-		</van-tabbar-item> -->
 	</view>
 </template>
 
@@ -53,7 +41,7 @@ export default {
 		},
 		inactiveColor: {
 			type: String,
-			default: '7d7e80'
+			default: '#7d7e80'
 		},
 		value: {
 			type: [Number, String],
@@ -70,6 +58,10 @@ export default {
 		safeAreaInsetBottom: {
 			type: Boolean,
 			default: null
+		},
+		size: {
+			type: String,
+			default: '32rpx'
 		},
 
 		/**

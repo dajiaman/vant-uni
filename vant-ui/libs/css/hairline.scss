@@ -7,7 +7,10 @@
 	position: relative;
 }
 
-.van-hairline--top-bottom::after {
+.van-hairline--top-bottom::after, 
+.van-hairline--top::after, 
+.van-hairline--left::after,
+.van-hairline--bottom:after {
 	position: absolute;
 	box-sizing: border-box;
 	content: ' '; 

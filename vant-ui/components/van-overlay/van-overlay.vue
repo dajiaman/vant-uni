@@ -1,10 +1,16 @@
 <template>
-	<view class="van-overlay" :style="[maskStyle, zoomStyle]" @click.stop="onClick" 
-	@touchmove.stop.prevent
-	:class="{
-		'u-mask-zoom': zoom,
-		'u-mask-show': show
-	}"><slot></slot></view>
+	<view
+		class="van-overlay"
+		:style="[maskStyle, zoomStyle]"
+		@tap="onClick"
+		@touchmove.stop.prevent
+		:class="{
+			'u-mask-zoom': zoom,
+			'u-mask-show': show
+		}"
+	>
+		<slot></slot>
+	</view>
 </template>
 
 <script>
@@ -29,7 +35,7 @@ export default {
 			type: Boolean,
 			default: true
 		},
-		lockScroll: {
+		closeOnClickOverlay: {
 			type: Boolean,
 			default: true
 		}
@@ -68,6 +74,8 @@ export default {
 	},
 	methods: {
 		onClick() {
+			if (!this.closeOnClickOverlay) return;
+			console.log('overlay click');
 			this.$emit('click');
 		}
 	}
@@ -77,19 +85,19 @@ export default {
 <style lang="scss" scoped>
 .van-overlay {
 	position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			opacity: 0;
-			transition: transform 0.3s
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: transform 0.3s;
 }
 
-	.u-mask-show {
-		opacity: 1;
-	}
-	
-	.u-mask-zoom {
-		transform: scale(1.2, 1.2);
-	}
+.u-mask-show {
+	opacity: 1;
+}
+
+.u-mask-zoom {
+	transform: scale(1.2, 1.2);
+}
 </style>

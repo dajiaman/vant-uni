@@ -85,12 +85,14 @@
     "h5" : {
         "template" : "template.h5.html",
         "router" : {
-            "mode" : "hash"
+            "mode" : "hash",
+            "base" : "/vant-uni/"
         },
         "optimization" : {
             "treeShaking" : {
                 "enable" : true
             }
-        }
+        },
+        "domain" : "http://dajiaman.github.io"
     }
 }

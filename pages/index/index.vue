@@ -14,12 +14,14 @@
 			<van-cell title="NumberBoxBoard 数字键盘" is-link url="/pages/keyboard/index"></van-cell>
 			<van-cell title="Rate 评分" is-link url="/pages/rate/index"></van-cell>
 			<van-cell title="stepper 步进器" is-link url="/pages/stepper/index"></van-cell>
-			<van-cell title="switch 步进器" is-link url="/pages/switch/index"></van-cell>
+			<van-cell title="switch 开关" is-link url="/pages/switch/index"></van-cell>
+			<van-cell title="uploader 文件上传" is-link url="/pages/uploader/index"></van-cell>
 		</van-cell-group>
 
 		<van-cell-group title="反馈组件">
 			<van-cell title="actionsheet 动作面板" is-link url="/pages/action-sheet/index"></van-cell>
 			<van-cell title="Loading 加载" is-link url="/pages/loading/index"></van-cell>
+			<van-cell title="Dialog" is-link url="/pages/dialog/index"></van-cell>
 			<van-cell title="Overlay 遮罩层" is-link url="/pages/overlay/index"></van-cell>
 			<van-cell title="SwipeCell 滑动菜单" is-link url="/pages/swipe-cell/index"></van-cell>
 			<van-cell title="Toast 轻提示" is-link url="/pages/toast/index"></van-cell>

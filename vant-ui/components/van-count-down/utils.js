@@ -42,6 +42,10 @@ export function parseFormat(format, timeData) {
 		seconds,
 		milliseconds
 	} = timeData;
+	
+	let format = {};
+	
+	
 
 	if (format.indexOf('DD') === -1) {
 		hours += days * 24;

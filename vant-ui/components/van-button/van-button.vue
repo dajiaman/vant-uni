@@ -15,7 +15,7 @@
 		]"
 		:disabled="disabled"
 		:loading="loading"
-		@tap.stop="click($event)"
+		@click="click($event)"
 		:style="baseStyle"
 		:open-type="disabled ? '' : openType"
 		:form-type="formType"
@@ -150,7 +150,7 @@ export default {
 		// 当没有传bgColor变量时，按钮按下去的颜色类名
 		getHoverClass() {
 			// 如果开启水波纹效果，则不启用hover-class效果
-			if (this.loading || this.disabled || this.ripple ) return '';
+			if (this.loading || this.disabled || this.ripple) return '';
 			let hoverClass = '';
 			hoverClass = this.type ? 'van-button--' + this.type + '--hover' : '';
 			return hoverClass;
@@ -232,6 +232,11 @@ export default {
 	transition: opacity $animation-duration-fast;
 	-webkit-appearance: none;
 
+	&:after {
+		border: 1rpx solid transparent;
+	}
+	
+
 	&:active::before {
 		opacity: 0.1;
 	}
@@ -247,21 +252,20 @@ export default {
 		color: $button-default-color;
 		background-color: $button-default-background-color;
 		border: $button-border-width solid $button-default-border-color;
-		
-		&--hover{
-			background-color: rgba($button-default-border-color, .8);
+
+		&--hover {
+			background-color: rgba($button-default-border-color, 0.8);
 			border: $button-border-width solid $button-default-border-color;
 		}
-		
 	}
 
 	&--primary {
 		color: $button-primary-color;
 		background-color: $button-primary-background-color;
 		border: $button-border-width solid $button-primary-border-color;
-		
-		&--hover{
-			background-color: rgba($button-primary-background-color, .8);
+
+		&--hover {
+			background-color: rgba($button-primary-background-color, 0.8);
 			border: $button-border-width solid $button-primary-border-color;
 		}
 	}
@@ -270,22 +274,20 @@ export default {
 		color: $button-info-color;
 		background-color: $button-info-background-color;
 		border: $button-border-width solid $button-info-border-color;
-		
-		&--hover{
-			background-color: rgba($button-info-background-color, .8);
+
+		&--hover {
+			background-color: rgba($button-info-background-color, 0.8);
 			border: $button-border-width solid $button-info-border-color;
 		}
-		
 	}
 
 	&--danger {
 		color: $button-danger-color;
 		background-color: $button-danger-background-color;
 		border: $button-border-width solid $button-danger-border-color;
-		
-		
-		&--hover{
-			background-color: rgba($button-danger-background-color, .8);
+
+		&--hover {
+			background-color: rgba($button-danger-background-color, 0.8);
 			border: $button-border-width solid $button-danger-border-color;
 		}
 	}
@@ -294,12 +296,11 @@ export default {
 		color: $button-warning-color;
 		background-color: $button-warning-background-color;
 		border: $button-border-width solid $button-warning-border-color;
-		
-		&--hover{
-			background-color: rgba($button-warning-background-color, .8);
+
+		&--hover {
+			background-color: rgba($button-warning-background-color, 0.8);
 			border: $button-border-width solid $button-warning-border-color;
 		}
-		
 	}
 
 	&--plain {
@@ -328,7 +329,7 @@ export default {
 	}
 
 	&--normal {
-		padding: 0 15px;
+		padding: 0 30rpx;
 		font-size: $button-normal-font-size;
 	}
 
@@ -413,8 +414,4 @@ export default {
 		}
 	}
 }
-
-
-
-
 </style>

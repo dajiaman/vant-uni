@@ -11,6 +11,13 @@
 		@click="click"
 	>	
 	
+	 <van-info
+			v-if="info !== null || dot"
+	    :dot="dot"
+	    :info="info"
+	    class="van-icon__info"
+	  />
+	
 		<image v-if="isImageName" :src="name" mode="aspectFit" class="van-icon__image" 
 		 :style="{
 			 width: size,

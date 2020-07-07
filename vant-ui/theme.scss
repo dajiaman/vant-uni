@@ -59,11 +59,11 @@ $animation-timing-function-leave: ease-in;
 
 // Border
 $border-color: $gray-3;
-$border-width-base: 2rpx;
+$border-width-base: 1rpx;
 $border-radius-sm: 4rpx;
 $border-radius-md: 8rpx;
 $border-radius-lg: 16rpx;
-$border-radius-max: 999px;
+$border-radius-max: 999rpx;
 
 
 
@@ -295,19 +295,19 @@ $coupon-list-empty-tip-font-size: $font-size-md;
 $coupon-list-empty-tip-line-height: 20px;
 
 // Dialog
-$dialog-width: 320px;
+$dialog-width: 640rpx;
 $dialog-small-screen-width: 90%;
 $dialog-font-size: $font-size-lg;
 $dialog-transition: $animation-duration-base;
-$dialog-border-radius: 16px;
+$dialog-border-radius: 32rpx;
 $dialog-background-color: $white;
 $dialog-header-font-weight: $font-weight-bold;
-$dialog-header-line-height: 24px;
+$dialog-header-line-height: 48rpx;
 $dialog-header-padding-top: $padding-lg;
 $dialog-header-isolated-padding: $padding-lg 0;
 $dialog-message-padding: $padding-lg;
 $dialog-message-font-size: $font-size-md;
-$dialog-message-line-height: 20px;
+$dialog-message-line-height: 40rpx;
 $dialog-message-max-height: 60vh;
 $dialog-has-title-message-text-color: $gray-7;
 $dialog-has-title-message-padding-top: $padding-sm;
@@ -376,15 +376,15 @@ $grid-item-text-font-size: $font-size-sm;
 
 // GoodsAction
 $goods-action-background-color: $white;
-$goods-action-height: 50px;
-$goods-action-icon-width: 48px;
+$goods-action-height: 100rpx;
+$goods-action-icon-width: 96rpx;
 $goods-action-icon-height: 100%;
 $goods-action-icon-color: $text-color;
-$goods-action-icon-size: 18px;
+$goods-action-icon-size: 36rpx;
 $goods-action-icon-font-size: $font-size-xs;
 $goods-action-icon-active-color: $active-color;
 $goods-action-icon-text-color: $gray-7;
-$goods-action-button-height: 40px;
+$goods-action-button-height: 80rpx;
 $goods-action-button-warning-color: $gradient-orange;
 $goods-action-button-danger-color: $gradient-red;
 
@@ -608,11 +608,11 @@ $share-sheet-cancel-button-height: 48px;
 $share-sheet-cancel-button-background: $white;
 
 // Search
-$search-padding: 10px $padding-sm;
+$search-padding: 20rpx $padding-sm;
 $search-background-color: $white;
 $search-content-background-color: $gray-1;
-$search-input-height: 34px;
-$search-label-padding: 0 5px;
+$search-input-height: 68rpx;
+$search-label-padding: 0 10rpx;
 $search-label-color: $text-color;
 $search-label-font-size: $font-size-md;
 $search-left-icon-color: $gray-6;
@@ -811,29 +811,29 @@ $tree-select-item-disabled-color: $gray-5;
 $tree-select-item-selected-size: 16px;
 
 // Uploader
-$uploader-size: 80px;
-$uploader-icon-size: 24px;
+$uploader-size: 160rpx;
+$uploader-icon-size: 48rpx;
 $uploader-icon-color: $gray-4;
 $uploader-text-color: $gray-6;
 $uploader-text-font-size: $font-size-sm;
-$uploader-upload-border-radius: 8px;
+$uploader-upload-border-radius: 16rpx;
 $uploader-upload-background-color: $gray-1;
 $uploader-upload-active-color: $active-color;
 $uploader-delete-color: $gray-6;
-$uploader-delete-icon-size: 18px;
+$uploader-delete-icon-size: 36rpx;
 $uploader-delete-background-color: $white;
 $uploader-file-background-color: $background-color;
-$uploader-file-icon-size: 20px;
+$uploader-file-icon-size: 40rpx;
 $uploader-file-icon-color: $gray-7;
 $uploader-file-name-padding: 0 $padding-base;
 $uploader-file-name-margin-top: $padding-xs;
 $uploader-file-name-font-size: $font-size-sm;
 $uploader-file-name-text-color: $gray-7;
 $uploader-mask-background-color: fade($gray-8, 88%);
-$uploader-mask-icon-size: 22px;
+$uploader-mask-icon-size: 44rpx;
 $uploader-mask-message-font-size: $font-size-sm;
-$uploader-mask-message-line-height: 14px;
-$uploader-loading-icon-size: 22px;
+$uploader-mask-message-line-height: 28rpx;
+$uploader-loading-icon-size: 44rpx;
 $uploader-loading-icon-color: $white;
 $uploader-disabled-opacity: $disabled-opacity;
 

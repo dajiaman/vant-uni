@@ -6,27 +6,18 @@
 		</view>
 		
 		<view class="van-doc-demo-block">
-			<h2 class="van-doc-demo-block__title">自定义格式</h2>
-			<van-count-down :time="time" format="DD 天 HH 时 mm 分 ss 秒" />
-		</view>
-		
-		
-		<view class="van-doc-demo-block">
-			<h2 class="van-doc-demo-block__title">毫秒级渲染</h2>
-			<van-count-down millisecond :time="time" format="HH:mm:ss:SS" />
+			<h2 class="van-doc-demo-block__title">分隔符</h2>
+			<van-count-down :time="time" :showDays="false" separator="zh" />
 		</view>
 		
 		
 		<view class="van-doc-demo-block">
 			<h2 class="van-doc-demo-block__title">自定义样式</h2> 
-		
+			<van-count-down  :time="time" height="40" :show-border="true" bgColor="#000" 
+			font-size="28" color="#fff" ></van-count-down>
 		</view>
 		
-		
 	
-		
-		
-		
 	</view>
 </template>
 
@@ -34,7 +25,7 @@
 export default {
 	data() {
 		return {
-			time: 1000 * 5
+			time: 30 * 60 * 60,
 		};
 	}
 };

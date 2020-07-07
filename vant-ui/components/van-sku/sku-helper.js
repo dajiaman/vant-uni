@@ -42,7 +42,9 @@ export const getSkuComb = (skuList, selectedSku) => {
 // 获取已选择的sku名称
 export const getSelectedSkuValues = (skuTree, selectedSku) => {
   const normalizedTree = normalizeSkuTree(skuTree);
+	
   return Object.keys(selectedSku).reduce((selectedValues, skuKeyStr) => {
+	 console.log('skuKeyStr', skuKeyStr);
     const skuValues = normalizedTree[skuKeyStr];
     const skuValueId = selectedSku[skuKeyStr];
 

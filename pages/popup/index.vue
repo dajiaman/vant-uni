@@ -26,7 +26,9 @@
 		</view>
 
 		<van-popup v-model="show1" :position="position" 
-		:closeable="closeable" :round="round" height="50%" :close-icon="closeIcon" 
+		:closeable="closeable" :round="round" 
+		 
+		 :close-icon="closeIcon" 
 		:close-icon-position="closeIconPosition"
 		@close="close" @open="open">xxx</van-popup>
 	</view>

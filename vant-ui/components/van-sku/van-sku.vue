@@ -513,31 +513,35 @@ export default {
 
 			if (action === 'minus') {
 				if (this.startSaleNum > 1) {
-					this.$refs.toast({
-						message: this.startSaleNum + '件起售'
-					});
+						// this.$refs.toast({
+						// 	message: this.startSaleNum + '件起售'
+						// });
+						this.$van.toast(this.startSaleNum + '件起售');
 				} else {
-					this.$refs.toast.show({
-						message: '至少选择一件'
-					});
+					// this.$refs.toast.show({
+					// 	message: '至少选择一件'
+					// });
+					this.$van.toast('至少选择一件');
 				}
 			} else if (action === 'plus') {
 				if (limitType === QUOTA_LIMIT) {
 					if (quotaUsed > 0) {
-						this.$refs.toast.show({
-							message: '每人限购' + quota + '件，你已购买' + quotaUsed + '件'
-						});
+						// this.$refs.toast.show({
+						// 	message: '每人限购' + quota + '件，你已购买' + quotaUsed + '件'
+						// });
+						this.$van.toast('每人限购' + quota + '件，你已购买' + quotaUsed + '件');
 						// Toast(t('quotaUsedTip', quota, quotaUsed));
 					} else {
-						this.$refs.toast.show({
-							message: '每人限购' + quota + '件'
-						});
+						
+						this.$van.toast('每人限购' + quota + '件');
+						
+						// this.$refs.toast.show({
+						// 	message: '每人限购' + quota + '件'
+						// });
 						// Toast(t('quotaTip', quota));
 					}
 				} else {
-					this.$refs.toast.show({
-						message: '库存不足'
-					});
+					this.$van.toast("库存不足");
 				}
 			}
 		},
@@ -558,9 +562,8 @@ export default {
 			const error = this.validateSku();
 			if (error) {
 				console.log('validate error:', error);
-				this.$refs.toast.show({
-					message: error
-				});
+					this.$van.toast(error);
+				
 			} else {
 				this.$emit(type, this.getSkuData());
 			}

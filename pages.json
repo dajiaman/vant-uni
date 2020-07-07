@@ -1,4 +1,4 @@
-{	
+{
 	"easycom": {
 		"^van-(.*)": "@/vant-ui/components/van-$1/van-$1.vue"
 	},
@@ -49,6 +49,12 @@
 			"path": "pages/layout/index",
 			"style": {
 				"navigationBarTitleText": "layout"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "search"
 			}
 		},
 		{
@@ -201,15 +207,39 @@
 				"navigationBarTitleText": "picker"
 			}
 		},
-		
+
 		{
 			"path": "pages/sku/index",
 			"style": {
 				"navigationBarTitleText": "sku"
 			}
+		},
+		{
+			"path": "pages/uploader/index",
+			"style": {
+				"navigationBarTitleText": "uploader"
+			}
+		},
+		{
+			"path": "pages/dialog/index",
+			"style": {
+				"navigationBarTitleText": "dialog"
+			}
 		}
 	],
-	"globalStyle": { 
+	"subPackages": [{
+		"root": "pages/template/mall/",
+		"pages": [{
+			"path": "member_center/index" 
+		}, {
+			"path": "cart/cart" 
+		}, {
+			"path": "classify/classify" 
+		}, {
+			"path": "item/detail"
+		}]
+	}],
+	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",

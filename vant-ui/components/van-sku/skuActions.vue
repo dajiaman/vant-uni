@@ -1,8 +1,8 @@
 <template>
 	<view class="van-sku-actions">
-		<van-button class="van-button" size="large" type="warning" round @tap="createEmitter('sku:addCart')">加入购物车</van-button>
+		<van-button class="van-button " type="warning" round @tap="createEmitter('sku:addCart')">加入购物车</van-button>
 
-		<van-button class="van-button"  round size="large" type="danger" @tap="createEmitter('sku:buy')">立即购买</van-button>
+		<van-button class="van-button"  round  type="danger" @tap="createEmitter('sku:buy')">立即购买</van-button>
 	</view>
 </template>
 

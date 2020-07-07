@@ -8,11 +8,11 @@
 	]"
 	@tap.stop="click">
 		
-		<slot name="title" v-if="$slots['title']"></slot>
+		<slot name="title" v-if="$slots['title']" :style="titleStyle"></slot>
 		
 		<van-icon class="van-cell__left-icon" v-if="icon && !$slots['title']" :name="icon" size="38rpx"></van-icon>
 		
-		<view v-if="!$slots['title']" class="van-cell__title">
+		<view v-if="!$slots['title']" class="van-cell__title" :style="titleStyle">
 			<text>{{ title }}</text>
 			<view class="van-cell__label">{{label}}</view>
 		</view>
@@ -76,6 +76,11 @@ export default {
 		hoverClass: {
 			type: String,
 			default: 'van-cell--clickable'
+		},
+		
+		titleStyle: {
+			type: Object,
+			default: () => {}
 		}
 	},
 	data () {

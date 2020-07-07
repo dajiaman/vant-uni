@@ -1,6 +1,6 @@
 <template>
 	<view v-if="visibleSync" :style="[customStyle]" :class="{ 'u-drawer-visible': showDrawer }" class="u-drawer">
-		<van-overlay  :show="showDrawer && overlay" @click="maskClick"></van-overlay>
+		<van-overlay :closeOnClickOverlay="closeOnClickOverlay" :show="showDrawer && overlay" @click="maskClick"></van-overlay>
 		<view
 			class="u-drawer-content"
 			@tap="modeCenterClose(position)"
@@ -108,7 +108,7 @@ export default {
 			default: false
 		},
 		// 是否可以通过点击遮罩进行关闭
-		maskCloseable: {
+		closeOnClickOverlay: {
 			type: Boolean,
 			default: true
 		},
@@ -262,8 +262,9 @@ export default {
 		},
 		// 遮罩被点击
 		maskClick() {
-			if(this.maskClick){
-					this.close();
+			console.log('mask click')
+			if(this.closeOnClickOverlay){
+				this.close();
 			}
 		},
 		close() {
@@ -272,7 +273,7 @@ export default {
 		// 中部弹出时，需要.u-drawer-content将居中内容，此元素会铺满屏幕，点击需要关闭弹窗
 		// 让其只在mode=center时起作用
 		modeCenterClose(position) {
-			if (position != 'center' || !this.maskCloseAble) return;
+			if (position != 'center' || !this.closeOnClickOverlay) return;
 			this.close();
 		},
 		open() {
@@ -373,8 +374,6 @@ export default {
 	z-index: 99999;
 }
 .u-mode-center-box {
-	min-width: 100rpx;
-	min-height: 100rpx;
 	/* #ifndef APP-NVUE */
 	display: block;
 	/* #endif */

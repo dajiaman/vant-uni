@@ -1,17 +1,21 @@
 <template>
 	<view class="van-info"
+	v-if="info !== null || dot"
 	:class="[
 		dot ? 'van-info--dot' : ''
 	]">
-		{{badge}}
+		{{ info ? info : badge }}
 	</view>
 </template>
 
 <script>
+	
+	
 	export default {
 		props: {
 			dot: Boolean,
 			badge: [String, Number],
+			info: [String, Number],
 		}
 	}
 </script>
