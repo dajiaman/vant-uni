@@ -13,6 +13,7 @@
 		<view class="van-action-sheet__description">{{ description }}</view>
 
 		<button class="van-action-sheet__item" v-for="(item, index) in actions"
+		:key="index"
 		@touchmove.stop.prevent
 		 @click.stop="actionClick(item, index)">
 			<text class="van-action-sheet__name">{{ item.name }}</text>

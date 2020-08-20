@@ -1,6 +1,6 @@
 <template>
 	<view class="van-rate" hover-class="" :class="[disabled ? 'van-rate--disabled' : '', readonly ? 'van-rate--readonly' : '']">
-		<view class="van-rate__item" v-for="(status, index) in list">
+		<view class="van-rate__item" v-for="(status, index) in list" :key="index">
 			<van-icon
 				:name="status === 'full' ? icon : voidIcon"
 				class="van-rate__icon"
