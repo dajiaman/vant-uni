@@ -68,6 +68,9 @@
 	&__right-icon {
 		margin-left: 10rpx;
 		color: $cell-right-icon-color;
+        
+        display: inline-flex;
+        align-items: center;
 	}
 
 	&--clickable {

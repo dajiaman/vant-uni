@@ -29,6 +29,8 @@
 			<van-cell-group>
 				<van-cell title="单元格" is-link />
 				<van-cell title="单元格" is-link value="内容" />
+                <van-cell title="单元格" is-link label="内容" />
+                
 				<van-cell title="单元格" is-link value="内容" arrow-direction="down" />
 			</van-cell-group>
 		</view>

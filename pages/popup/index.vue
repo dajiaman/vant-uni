@@ -30,7 +30,9 @@
 		 
 		 :close-icon="closeIcon" 
 		:close-icon-position="closeIconPosition"
-		@close="close" @open="open">xxx</van-popup>
+		@close="close" @open="open">
+            <view style="height: 200rpx">这是里面的内容这是里面的内容这是里面的内容这是里面的内容</view>
+        </van-popup>
 	</view>
 </template>
 

@@ -47,7 +47,8 @@ export default {
 			this.$refs.toast.show({
 				type: 'loading',
 				mask: true,
-				message: '加载中...'
+				message: '加载中...',
+                duration: 1000000
 			});
 		},
 		

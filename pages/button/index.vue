@@ -4,18 +4,18 @@
 			<h2 class="van-doc-demo-block__title">按钮类型</h2>
 
 			<view class="demo-button-row">
-				<van-button type="default">默认按钮</van-button>
-				<van-button type="primary">主要按钮</van-button>
-				<van-button type="info">信息按钮</van-button>
+				<van-button type="default" text="默认按钮"></van-button>
+				<van-button type="primary" text="主要按钮"></van-button>
+				<van-button type="info" text="信息按钮"></van-button>
 			</view>
 
-			<van-button type="warning">警告按钮</van-button>
-			<van-button type="danger">危险按钮</van-button>
+			<van-button type="warning" text="警告按钮"></van-button>
+			<van-button type="danger" text="危险按钮"></van-button>
 		</view>
 
 		<view class="van-doc-demo-block">
 			<h2 class="van-doc-demo-block__title">朴素按钮</h2>
-			<van-button plain type="primary">朴素按钮</van-button>
+			<van-button plain type="primary" text="朴素按钮">朴素按钮</van-button>
 			<van-button plain type="info">朴素按钮</van-button>
 		</view>
 

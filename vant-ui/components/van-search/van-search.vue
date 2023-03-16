@@ -1,8 +1,6 @@
 <template>
 	<view class="van-search" :class="[showAction ? 'van-search--show-action' : '']"
-	:style="{
-		
-	}">
+	>
 		<view class="van-search__content" :class="[shape ? 'van-search__content--' + shape : '']">
 			<view class="van-search__label" v-if="label">{{ label }}</view>
 

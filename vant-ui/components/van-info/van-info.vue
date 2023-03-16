@@ -1,7 +1,7 @@
 <template>
 	<view class="van-info"
 	v-if="info !== null || dot"
-	:class="[
+	:class="[ 
 		dot ? 'van-info--dot' : ''
 	]">
 		{{ info ? info : badge }}
@@ -9,9 +9,7 @@
 </template>
 
 <script>
-	
-	
-	export default {
+	export default { 
 		props: {
 			dot: Boolean,
 			badge: [String, Number],

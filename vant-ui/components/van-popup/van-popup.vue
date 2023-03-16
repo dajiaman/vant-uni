@@ -1,5 +1,5 @@
 <template>
-	<view v-if="visibleSync" :style="[customStyle]" :class="{ 'u-drawer-visible': showDrawer }" class="u-drawer">
+	<view v-if="visibleSync" :style="[customStyle]" :class="{'u-drawer-visible': showDrawer }" class="u-drawer">
 		<van-overlay :closeOnClickOverlay="closeOnClickOverlay" :show="showDrawer && overlay" @click="maskClick"></van-overlay>
 		<view
 			class="u-drawer-content"
