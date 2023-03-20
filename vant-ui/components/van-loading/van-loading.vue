@@ -1,96 +1,200 @@
 <template>
-	<view v-if="show" class="u-loading" :class="mode == 'circle' ? 'u-loading-circle' : 'u-loading-flower'" :style="[cricleStyle]">
-	</view>
+  <view class="van-loading">
+    <view class="van-loading__spinner" :class="[
+      type ? 'van-loading__spinner--' + type : '',
+    ]" :style="spinnerStyle">
+      <view class="van-loading__dot" v-if="type === 'spinner'" v-for="(item, index) in array12" :key="index">
+      </view>
+    </view>
+
+    <view class="van-loading__text" :style="textStyle">
+      <slot />
+    </view>
+  </view>
 </template>
 
 <script>
-	/**
-	 * loading 加载动画
-	 * @description 警此组件为一个小动画，目前用在uView的loadmore加载更多和switch开关等组件的正在加载状态场景。
-	 * @tutorial https://www.uviewui.com/components/loading.html
-	 * @property {String} mode 模式选择，见官网说明（默认circle）
-	 * @property {String} color 动画活动区域的颜色，只对 mode = flower 模式有效（默认#c7c7c7）
-	 * @property {String Number} size 加载图标的大小，单位rpx（默认34）
-	 * @property {Boolean} show 是否显示动画（默认true）
-	 * @example <u-loading mode="circle"></u-loading>
-	 */
-	export default {
-		name: "u-loading",
-		props: {
-			// 动画的类型
-			mode: {
-				type: String,
-				default: 'circle'
-			},
-			// 动画的颜色
-			color: {
-				type: String,
-				default: '#c7c7c7'
-			},
-			// 加载图标的大小，单位rpx
-			size: {
-				type: [String, Number],
-				default: '34'
-			},
-			// 是否显示动画
-			show: {
-				type: Boolean,
-				default: true
-			}
-		},
-		computed: {
-			// 加载中圆圈动画的样式
-			cricleStyle() {
-				let style = {};
-				style.width = this.size + 'rpx';
-				style.height = this.size + 'rpx';
-				if (this.mode == 'circle') style.borderColor = `#e4e4e4 #e4e4e4 #e4e4e4 ${this.color ? this.color : '#c7c7c7'}`;
-				return style;
-			},
-		}
-	}
+  import {
+    addUnit,
+    style
+  } from '../../libs/utils/index.js';
+
+  export default {
+    name: "van-loading",
+    props: {
+      color: String,
+      vertical: Boolean,
+      type: {
+        type: String,
+        default: 'circular',
+      },
+      size: [Number, String],
+      textSize: [Number, String]
+    },
+    data() {
+      return {
+        array12: Array.from({
+          length: 12
+        }),
+      }
+    },
+    computed: {
+      textStyle() {
+        return style({
+          'font-size': addUnit(this.textSize),
+        });
+      },
+      spinnerStyle() {
+        return style({
+          color: this.color,
+          width: addUnit(this.size),
+          height: addUnit(this.size),
+        });
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
-	@import "../../libs/css/style.components.scss";
-	
-	.u-loading-circle {
-		display: inline-block;
-		vertical-align: middle;
-		width: 28rpx;
-		height: 28rpx;
-		background: 0 0;
-		border-radius: 50%;
-		border: 2px solid;
-		border-color: #e5e5e5 #e5e5e5 #e5e5e5 #8f8d8e;
-		animation: u-circle 1s linear infinite;
-	}
-	.u-loading-flower {
-		width: 20px;
-		height: 20px;
-		display: inline-block;
-		vertical-align: middle;
-		-webkit-animation: a 1s steps(12) infinite;
-		animation: u-flower 1s steps(12) infinite;
-		background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
-		background-size: 100%;
-	}
-	@keyframes u-flower {
-		0% {
-			-webkit-transform: rotate(0deg);
-			transform: rotate(0deg);
-		}
-		to {
-			-webkit-transform: rotate(1turn);
-			transform: rotate(1turn);
-		}
-	}
-	@-webkit-keyframes u-circle {
-		0% {
-			transform: rotate(0);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
+  @import "../../libs/css/style.components.scss";
+
+  .van-loading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $loading-spinner-color;
+
+
+    &__spinner {
+      position: relative;
+      box-sizing: border-box;
+      width: $loading-spinner-size;
+      // compatible for 0.x, users may set width or height in root element
+      max-width: 100%;
+      max-height: 100%;
+      height: $loading-spinner-size;
+
+      animation: van-rotate $loading-spinner-animation-duration linear infinite;
+
+      &--spinner {
+        animation-timing-function: steps(12);
+      }
+
+      &--circular {
+        border: 1rpx solid transparent;
+        border-top-color: currentColor;
+        border-radius: 100%;
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+
+      .van-loading__text {
+        margin: $padding-xs 0 0;
+      }
+    }
+
+    &__text {
+      margin-left: $padding-xs;
+      color: $loading-text-color;
+      font-size: $loading-text-font-size;
+      line-height: $loading-text-line-height;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+
+    &__dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::before {
+        display: block;
+        width: 2px;
+        height: 25%;
+        margin: 0 auto;
+        background-color: currentColor;
+        border-radius: 40%;
+        content: ' ';
+      }
+    }
+  }
+
+
+  .van-loading__dot:nth-of-type(1) {
+    transform: rotate(30deg);
+    opacity: 1;
+  }
+
+  .van-loading__dot:nth-of-type(2) {
+    transform: rotate(60deg);
+    opacity: 0.9375;
+  }
+
+  .van-loading__dot:nth-of-type(3) {
+    transform: rotate(90deg);
+    opacity: 0.875;
+  }
+
+  .van-loading__dot:nth-of-type(4) {
+    transform: rotate(120deg);
+    opacity: 0.8125;
+  }
+
+  .van-loading__dot:nth-of-type(5) {
+    transform: rotate(150deg);
+    opacity: 0.75;
+  }
+
+  .van-loading__dot:nth-of-type(6) {
+    transform: rotate(180deg);
+    opacity: 0.6875;
+  }
+
+  .van-loading__dot:nth-of-type(7) {
+    transform: rotate(210deg);
+    opacity: 0.625;
+  }
+
+  .van-loading__dot:nth-of-type(8) {
+    transform: rotate(240deg);
+    opacity: 0.5625;
+  }
+
+  .van-loading__dot:nth-of-type(9) {
+    transform: rotate(270deg);
+    opacity: 0.5;
+  }
+
+  .van-loading__dot:nth-of-type(10) {
+    transform: rotate(300deg);
+    opacity: 0.4375;
+  }
+
+  .van-loading__dot:nth-of-type(11) {
+    transform: rotate(330deg);
+    opacity: 0.375;
+  }
+
+  .van-loading__dot:nth-of-type(12) {
+    transform: rotate(360deg);
+    opacity: 0.3125;
+  }
+
+
+  @keyframes van-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
 </style>

@@ -211,6 +211,8 @@ $cell-group-title-color: $gray-6;
 $cell-group-title-padding: $padding-md $padding-md $padding-xs;
 $cell-group-title-font-size: $font-size-md;
 $cell-group-title-line-height: 32rpx;
+$cell-group-inset-padding: 32rpx;
+$cell-group-inset-border-radius: 16rpx;
 
 // Checkbox
 $checkbox-size: 40rpx;
@@ -249,8 +251,21 @@ $contact-edit-padding: $padding-md;
 $contact-edit-fields-radius: $border-radius-md;
 $contact-edit-buttons-padding: $padding-xl 0;
 $contact-edit-button-margin-bottom: $padding-sm;
-$contact-edit-button-font-size: 16px;
+$contact-edit-button-font-size: 16rpx;
 $contact-edit-field-label-width: 4em;
+
+
+// Badge
+$badge-size: 20rpx;
+$badge-color: $white;
+$badge-padding: 0 6rpx;
+$badge-font-size: $font-size-sm;
+$badge-font-weight: $font-weight-bold;
+$badge-border-width: $border-width-base;
+$badge-background-color: $red;
+$badge-dot-color: $red;
+$badge-dot-size: 16rpx;
+$badge-font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif;
 
 // ContactList
 $contact-list-edit-icon-size: 16px;
@@ -419,15 +434,17 @@ $info-font-family: $price-integer-font-family;
 $image-placeholder-text-color: $gray-6;
 $image-placeholder-font-size: $font-size-md;
 $image-placeholder-background-color: $background-color;
-$image-loading-icon-size: 22px;
-$image-error-icon-size: 22px;
+$image-loading-icon-size: 32rpx;
+$image-loading-icon-color: $gray-4;
+$image-error-icon-size: 32rpx;
+$image-error-icon-color:$gray-4;
 
 // ImagePreview
 $image-preview-index-text-color: $white;
 $image-preview-index-font-size: $font-size-md;
 $image-preview-index-text-shadow: 0 1px 1px $gray-8;
 $image-preview-overlay-background-color: rgba(0, 0, 0, 0.9);
-$image-preview-close-icon-size: 22px;
+$image-preview-close-icon-size: 22rpx;
 $image-preview-close-icon-color: $gray-5;
 $image-preview-close-icon-active-color: $gray-6;
 $image-preview-close-icon-margin: $padding-md;
@@ -442,6 +459,7 @@ $list-text-line-height: 50px;
 // Loading
 $loading-text-color: $gray-6;
 $loading-text-font-size: $font-size-md;
+$loading-text-line-height: 20rpx;
 $loading-spinner-color: $gray-5;
 $loading-spinner-size: 60rpx;
 $loading-spinner-animation-duration: 0.8s;

@@ -15,9 +15,9 @@
 <style>
 	@import "vant-ui/index.scss";
 	/*每个页面公共css */
-	
+
 	page{
-		background-color: #f2f2f2;
+		background-color: #e9e9e9;
 	}
-	
+
 </style>

@@ -1,248 +1,259 @@
 {
-	"easycom": {
-		"^van-(.*)": "@/vant-ui/components/van-$1/van-$1.vue"
-	},
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		},
-		{
-			"path": "pages/button/index",
-			"style": {
-				"navigationBarTitleText": "button"
-			}
-		},
-		{
-			"path": "pages/cell/index",
-			"style": {
-				"navigationBarTitleText": "cell"
-			}
-		},
-		{
-			"path": "pages/icon/index",
-			"style": {
-				"navigationBarTitleText": "icon"
-			}
-		},
-		{
-			"path": "pages/tag/index",
-			"style": {
-				"navigationBarTitleText": "tag"
-			}
-		},
-		{
-			"path": "pages/toast/index",
-			"style": {
-				"navigationBarTitleText": "toast"
-			}
-		},
-		{
-			"path": "pages/field/index",
-			"style": {
-				"navigationBarTitleText": "field"
-			}
-		},
-		{
-			"path": "pages/layout/index",
-			"style": {
-				"navigationBarTitleText": "layout"
-			}
-		},
-		{
-			"path": "pages/search/index",
-			"style": {
-				"navigationBarTitleText": "search"
-			}
-		},
-		{
-			"path": "pages/notice-bar/index",
-			"style": {
-				"navigationBarTitleText": "notice-bar"
-			}
-		},
-		{
-			"path": "pages/progress/index",
-			"style": {
-				"navigationBarTitleText": "progress"
-			}
-		},
-		{
-			"path": "pages/loading/index",
-			"style": {
-				"navigationBarTitleText": "loading"
-			}
-		},
-		{
-			"path": "pages/empty/index",
-			"style": {
-				"navigationBarTitleText": "empty"
-			}
-		},
-		{
-			"path": "pages/tabbar/index",
-			"style": {
-				"navigationBarTitleText": "tabbar"
-			}
-		},
-		{
-			"path": "pages/count-down/index",
-			"style": {
-				"navigationBarTitleText": "count-down"
-			}
-		},
-		{
-			"path": "pages/divider/index",
-			"style": {
-				"navigationBarTitleText": "divider"
-			}
-		},
-		{
-			"path": "pages/rate/index",
-			"style": {
-				"navigationBarTitleText": "rate"
-			}
-		},
-		{
-			"path": "pages/stepper/index",
-			"style": {
-				"navigationBarTitleText": "stepper"
-			}
-		},
-		{
-			"path": "pages/popup/index",
-			"style": {
-				"navigationBarTitleText": "popup"
-			}
-		},
-		{
-			"path": "pages/action-sheet/index",
-			"style": {
-				"navigationBarTitleText": "action-sheet"
-			}
-		},
-		{
-			"path": "pages/checkbox/index",
-			"style": {
-				"navigationBarTitleText": "checkbox"
-			}
-		},
-		{
-			"path": "pages/switch/index",
-			"style": {
-				"navigationBarTitleText": "switch"
-			}
-		},
-		{
-			"path": "pages/tab/index",
-			"style": {
-				"navigationBarTitleText": "tab"
-			}
-		},
-		{
-			"path": "pages/sticky/index",
-			"style": {
-				"navigationBarTitleText": "sticky"
-			}
-		},
-		{
-			"path": "pages/sticky/index2",
-			"style": {
-				"navigationBarTitleText": "sticky2"
-			}
-		},
-		{
-			"path": "pages/sticky/async",
-			"style": {
-				"navigationBarTitleText": "sticky async"
-			}
-		},
-		{
-			"path": "pages/sticky/wxs",
-			"style": {
-				"navigationBarTitleText": "sticky wxs"
-			}
-		},
-		{
-			"path": "pages/swipe-cell/index",
-			"style": {
-				"navigationBarTitleText": "swipe cell"
-			}
-		},
-		{
-			"path": "pages/keyboard/index",
-			"style": {
-				"navigationBarTitleText": "keyboard"
-			}
-		},
-		{
-			"path": "pages/grid/index",
-			"style": {
-				"navigationBarTitleText": "grid"
-			}
-		},
-		{
-			"path": "pages/lazyload/index",
-			"style": {
-				"navigationBarTitleText": "lazyload"
-			}
-		},
-		{
-			"path": "pages/waterfall/index",
-			"style": {
-				"navigationBarTitleText": "waterfall"
-			}
-		},
-		{
-			"path": "pages/index-list/index",
-			"style": {
-				"navigationBarTitleText": "index-list"
-			}
-		},
-		{
-			"path": "pages/picker/index",
-			"style": {
-				"navigationBarTitleText": "picker"
-			}
-		},
+  "easycom": {
+    "^van-(.*)": "@/vant-ui/components/van-$1/van-$1.vue"
+  },
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "button"
+      }
+    },
+    {
+      "path": "pages/cell/index",
+      "style": {
+        "navigationBarTitleText": "cell"
+      }
+    },
+    {
+      "path": "pages/icon/index",
+      "style": {
+        "navigationBarTitleText": "icon"
+      }
+    }, {
+      "path": "pages/image/index",
+      "style": {
+        "navigationBarTitleText": "image"
+      }
+    },
+    {
+      "path": "pages/tag/index",
+      "style": {
+        "navigationBarTitleText": "tag"
+      }
+    },
+    {
+      "path": "pages/toast/index",
+      "style": {
+        "navigationBarTitleText": "toast"
+      }
+    },
+    {
+      "path": "pages/field/index",
+      "style": {
+        "navigationBarTitleText": "field"
+      }
+    },
+    {
+      "path": "pages/layout/index",
+      "style": {
+        "navigationBarTitleText": "layout"
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "search"
+      }
+    },
+    {
+      "path": "pages/notice-bar/index",
+      "style": {
+        "navigationBarTitleText": "notice-bar"
+      }
+    },
+    {
+      "path": "pages/progress/index",
+      "style": {
+        "navigationBarTitleText": "progress"
+      }
+    },
+    {
+      "path": "pages/loading/index",
+      "style": {
+        "navigationBarTitleText": "loading"
+      }
+    },
+    {
+      "path": "pages/empty/index",
+      "style": {
+        "navigationBarTitleText": "empty"
+      }
+    },
+    {
+      "path": "pages/tabbar/index",
+      "style": {
+        "navigationBarTitleText": "tabbar"
+      }
+    },
+    {
+      "path": "pages/badge/index",
+      "style": {
+        "navigationBarTitleText": "badge"
+      }
+    },
+    {
+      "path": "pages/count-down/index",
+      "style": {
+        "navigationBarTitleText": "count-down"
+      }
+    },
+    {
+      "path": "pages/divider/index",
+      "style": {
+        "navigationBarTitleText": "divider"
+      }
+    },
+    {
+      "path": "pages/rate/index",
+      "style": {
+        "navigationBarTitleText": "rate"
+      }
+    },
+    {
+      "path": "pages/stepper/index",
+      "style": {
+        "navigationBarTitleText": "stepper"
+      }
+    },
+    {
+      "path": "pages/popup/index",
+      "style": {
+        "navigationBarTitleText": "popup"
+      }
+    },
+    {
+      "path": "pages/action-sheet/index",
+      "style": {
+        "navigationBarTitleText": "action-sheet"
+      }
+    },
+    {
+      "path": "pages/checkbox/index",
+      "style": {
+        "navigationBarTitleText": "checkbox"
+      }
+    },
+    {
+      "path": "pages/switch/index",
+      "style": {
+        "navigationBarTitleText": "switch"
+      }
+    },
+    {
+      "path": "pages/tab/index",
+      "style": {
+        "navigationBarTitleText": "tab"
+      }
+    },
+    {
+      "path": "pages/sticky/index",
+      "style": {
+        "navigationBarTitleText": "sticky"
+      }
+    },
+    {
+      "path": "pages/sticky/index2",
+      "style": {
+        "navigationBarTitleText": "sticky2"
+      }
+    },
+    {
+      "path": "pages/sticky/async",
+      "style": {
+        "navigationBarTitleText": "sticky async"
+      }
+    },
+    {
+      "path": "pages/sticky/wxs",
+      "style": {
+        "navigationBarTitleText": "sticky wxs"
+      }
+    },
+    {
+      "path": "pages/swipe-cell/index",
+      "style": {
+        "navigationBarTitleText": "swipe cell"
+      }
+    },
+    {
+      "path": "pages/keyboard/index",
+      "style": {
+        "navigationBarTitleText": "keyboard"
+      }
+    },
+    {
+      "path": "pages/grid/index",
+      "style": {
+        "navigationBarTitleText": "grid"
+      }
+    },
+    {
+      "path": "pages/lazyload/index",
+      "style": {
+        "navigationBarTitleText": "lazyload"
+      }
+    },
+    {
+      "path": "pages/waterfall/index",
+      "style": {
+        "navigationBarTitleText": "waterfall"
+      }
+    },
+    {
+      "path": "pages/index-list/index",
+      "style": {
+        "navigationBarTitleText": "index-list"
+      }
+    },
+    {
+      "path": "pages/picker/index",
+      "style": {
+        "navigationBarTitleText": "picker"
+      }
+    },
 
-		{
-			"path": "pages/sku/index",
-			"style": {
-				"navigationBarTitleText": "sku"
-			}
-		},
-		{
-			"path": "pages/uploader/index",
-			"style": {
-				"navigationBarTitleText": "uploader"
-			}
-		},
-		{
-			"path": "pages/dialog/index",
-			"style": {
-				"navigationBarTitleText": "dialog"
-			}
-		}
-	],
-	"subPackages": [{
-		"root": "pages/template/mall/",
-		"pages": [{
-			"path": "member_center/index" 
-		}, {
-			"path": "cart/cart" 
-		}, {
-			"path": "classify/classify" 
-		}, {
-			"path": "item/detail"
-		}]
-	}],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+    {
+      "path": "pages/sku/index",
+      "style": {
+        "navigationBarTitleText": "sku"
+      }
+    },
+    {
+      "path": "pages/uploader/index",
+      "style": {
+        "navigationBarTitleText": "uploader"
+      }
+    },
+    {
+      "path": "pages/dialog/index",
+      "style": {
+        "navigationBarTitleText": "dialog"
+      }
+    }
+  ],
+  "subPackages": [{
+    "root": "pages/template/mall/",
+    "pages": [{
+      "path": "member_center/index"
+    }, {
+      "path": "cart/cart"
+    }, {
+      "path": "classify/classify"
+    }, {
+      "path": "item/detail"
+    }]
+  }],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
